@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tuscany Villa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <script src="VillaScript.js"></script>
+    <link href="style.css" rel="stylesheet" />
+
+
+</head>
+<body onload="Greeting()">
+
+    <div class="container">
+        <div class="row navhead">
+            <div class="col navcol">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <!-- Brand/logo -->
+                    <a class="navbar-brand" href="#">Logo</a>
+                    <!-- Links -->
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LOCATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">AMENITIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">REVIEWS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row mainrow">
+            <div class="col-9 maincol">
+                <div class="jumbotron" id="jumbomain">
+                    <h1 onclick="myFunction()">Tuscany Villa</h1>
+                    <p onclick="myFunction()">We specialize in relaxation</p>
+                </div>
+            </div>
+            <div class="col-3 maincol">
+            </div>
+        </div>
+        <div class="row subheaderbar">
+            <div class="col subheadercol">
+                <h2 onclick=" this.style.color = 'red';">LOCATIONS</h2>
+                <p onclick=" this.style.color = 'yellow';">Some places for you to go</p>
+            </div>
+        </div>
+
+
+
+        <!--location 1 starts-->
+        <div class="row locationsrowodd" id="orig">
+            <div class="col-7 locationscolodd">
+                <p class="locheader">Location #1</p>
+                <p>The obvious idea is to start this article off with a description of lorem ipsum and where it came from, but as designers we pretty much all get the idea: it’s filler text. Perhaps a more relevant topic of discussion is whether or not you should ever really use lorem ipsum in your work.</p>
+                <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig','swap')">Reserve Now!</button>
+            </div>
+            <div class="col-5 locationscolodd">
+            </div>
+        </div>
+        <div class="row locationsrowodd" style="display:none" id="swap">
+            <div class="col-7 locationscolodd">
+                <h2>Please login or join to reserve a site</h2>
+                <form action="/action_page.php">
+                    First name:<br>
+                    <input type="text" name="firstname" value="Mickey">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname" value="Mouse">
+                    <br><br>
+                    <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap'); Redirect();">Submit</button>
+                    <output name="result" id="confirmResponse"></output>
+
+
+                </form>
+
+            </div>
+            <div class="col-5 locationscolodd">
+
+            </div>
+        </div>
+        <!--location 1 ends-->
+        <!--location 2 starts-->
+        <div class="row locationsroweven" id="orig1">
+            <div class="col-5 locationscoleven">
+            </div>
+            <div class="col-7 locationscoleven">
+                <p class="locheader">Location #2</p>
+                <p>The obvious idea is to start this article off with a description of lorem ipsum and where it came from, but as designers we pretty much all get the idea: it’s filler text. Perhaps a more relevant topic of discussion is whether or not you should ever really use lorem ipsum in your work.</p>
+                <button type="button" id="evenbtn" class="btn" onmouseover="overBtn1(this)" onmouseout="outBtn1(this)" onclick="SwapDivsWithClick('orig1','swap1')">Reserve Now!</button>
+            </div>
+        </div>
+        <div class="row locationsroweven" style="display:none" id="swap1">
+            <div class="col-5 locationscoleven">
+
+            </div>
+            <div class="col-7 locationscoleven">
+                <h2>Please login or join to reserve a site</h2>
+                <form action="/action_page.php">
+                    First name:<br>
+                    <input type="text" name="firstname" value="Mickey">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname" value="Mouse">
+                    <br><br>
+                    <button type="button" id="evenbtn" class="btn" onmouseover="overBtn1(this)" onmouseout="outBtn1(this)" onclick="SwapDivsWithClick('orig1','swap1')">Reserve Now!</button>
+                </form>
+            </div>
+        </div>
+
+        <!--location 2 ends-->
+        <!--location 3 starts-->
+        <div class="row locationsrowodd" id="orig3">
+            <div class="col-7 locationscolodd">
+                <p class="locheader">Location #3</p>
+                <p>The obvious idea is to start this article off with a description of lorem ipsum and where it came from, but as designers we pretty much all get the idea: it’s filler text. Perhaps a more relevant topic of discussion is whether or not you should ever really use lorem ipsum in your work.</p>
+                <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig3','swap3')">Join Us!</button>
+            </div>
+            <div class="col-5 locationscolodd2">
+            </div>
+        </div>
+        <div class="row locationsrowodd" style="display:none" id="swap3">
+            <div class="col-7 locationscolodd">
+                <h2>Please login or join to reserve a site</h2>
+                <form action="/action_page.php">
+                    First name:<br>
+                    <input type="text" name="firstname" value="Mickey">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname" value="Mouse">
+                    <br><br>
+                    <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig3','swap3')">Submit</button>
+                </form>
+
+            </div>
+            <div class="col-5 locationscolodd2">
+
+            </div>
+        </div>
+    </div>
+
+    <!--location 3 ends-->
+
+
+    <div class="row subheaderbar">
+        <div class="col subheadercol">
+            <h2>AMENITIES</h2>
+            <p>Some stuff for you to enjoy</p>
+        </div>
+    </div>
+    <div class="row checkerrow">
+        <div class="col-4 square bg pic1">
+            <div class="content">
+                <p class="locimg">RECEPTIONS</p>
+            </div>
+        </div>
+
+        <!-- start new array section -->
+        <div class="col-4 square bg text" id="villachoice">
+            <div class="content">
+                <p class="lochead">A VILLA FOR EVERY ACCASION </p>
+                <p class="locp">Lorem ipsum dolor amet food truck small batch photo booth mlkshk, PBR&B af swag artisan aesthetic affogato. Pitchfork tousled sartorial, vexillologist small batch adaptogen put a bird on it literally aesthetic. Iceland pitchfork intelligentsia palo santo lumbersexual pug fanny pack. </p>
+                <input id="buttonloc" type="submit" value="Submit" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="GetVilla(); SwapDivsWithClick('villachoice', 'villaswap');">
+            </div>
+        </div>
+        <div class="col-4 square bg text" id="villaswap" style="display:none">
+            <div class="content">
+                <p class="lochead">Available Villas</p>
+                <p class="locp" id="villout"><!-- this is a blank section where the array will go --></p>
+                <input id="buttonloc" type="submit" value="Return" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('villachoice', 'villaswap');">
+            </div>
+        </div>
+
+
+        <!--end new array section-->
+
+        <div class="col-4 square bg pic2">
+            <div class="content">
+                <p class="locimg">RELAX BY THE POOL</p>
+            </div>
+        </div>
+    </div>
+    <div class="row checkerrow2">
+        <div class="col-4 square bg text">
+            <div class="content">
+                <p class="lochead">WHAT SETS US APART </p>
+                <p class="locp">Lorem ipsum dolor amet food truck small batch photo booth mlkshk, PBR&B af swag artisan aesthetic affogato. Pitchfork tousled sartorial, vexillologist small batch adaptogen put a bird on it literally aesthetic. Iceland pitchfork intelligentsia palo santo lumbersexual pug fanny pack. </p>
+                <input id="buttonloc" type="submit" value="Submit" onmouseover="overBtn(this)" onmouseout="outBtn(this)">
+            </div>
+        </div>
+        <div class="col-4 square bg pic3">
+            <div class="content">
+                <p class="locimg">FEELS LIKE HOME</p>
+            </div>
+        </div>
+        <div class="col-4 square bg text">
+            <div class="content">
+                <p class="lochead">TALK TO STAFF </p>
+                <p class="locp">Lorem ipsum dolor amet food truck small batch photo booth mlkshk, PBR&B af swag artisan aesthetic affogato. Pitchfork tousled sartorial, vexillologist small batch adaptogen put a bird on it literally aesthetic. Iceland pitchfork intelligentsia palo santo lumbersexual pug fanny pack. </p>
+                <input id="buttonloc" type="submit" value="Submit" onmouseover="overBtn(this)" onmouseout="outBtn(this)">
+            </div>
+        </div>
+    </div>
+    <div class="row checkerrow2">
+        <div class="col-4 square bg pic4">
+            <div class="content">
+                <p class="locimg">ENJOY THE VIEW</p>
+            </div>
+        </div>
+        <div class="col-4 square bg text">
+            <div class="content">
+                <p class="lochead">BOOK YOUR VILLA </p>
+                <p class="locp">Lorem ipsum dolor amet food truck small batch photo booth mlkshk, PBR&B af swag artisan aesthetic affogato. Pitchfork tousled sartorial, vexillologist small batch adaptogen put a bird on it literally aesthetic. Iceland pitchfork intelligentsia palo santo lumbersexual pug fanny pack. </p>
+                <input id="buttonloc" type="submit" value="Submit" onmouseover="overBtn(this)" onmouseout="outBtn(this)">
+            </div>
+        </div>
+        <div class="col-4 square bg pic5">
+            <div class="content">
+                <p class="locimg">PRIVATE DINING</p>
+            </div>
+        </div>
+    </div>
+    <div class="row subheaderbar2">
+        <div class="col subheadercol">
+            <h2>REVIEWS</h2>
+            <p>What our customers say</p>
+        </div>
+    </div>
+    <div class="row carouselrow">
+        <div class="col carouselcol">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/image1.jpg" alt="Los Angeles">
+                        <div class="carousel-caption">
+                            <h3>Villa Calcina</h3>
+                            <p>Literally heaven on earth!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image2.jpg" alt="Chicago">
+                        <div class="carousel-caption">
+                            <h3>La Poventa</h3>
+                            <p>We had such a great time!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image3.jpg" alt="New York">
+                        <div class="carousel-caption">
+                            <h3>Umbria</h3>
+                            <p>Peaceful and luxurious!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row subheaderbar2">
+        <div class="col subheadercol">
+            <h2>CONTACT</h2>
+            <p>We have the answers</p>
+        </div>
+    </div>
+    <div class="row contactrow">
+        <div class="col-5 contactcol">
+            <p>Contact us and we will get back with you in 24 hours</p>
+            <i class="fas fa-map-marker-alt">  Cleveland Ohio</i>
+            <i class="fas fa-mobile-alt">   2166098675</i>
+            <i class="fas fa-envelope">  backatyour.org</i>
+        </div>
+        <div class="col-7 contactcol">
+            <form action="/action_page.php" id="usrform">
+                <input id="fname" type="text" name="name" value="Name"><input id="email" type="text" name="email" value="email">
+            </form>
+            <br>
+            <textarea rows="4" cols="70" name="comment" form="usrform">Comment</textarea>
+            <input id="button3" type="submit" value="Submit" onmouseover="overBtn(this)" onmouseout="outBtn(this)">
+        </div>
+    </div>
+    <div class="row subheaderbar2">
+        <div class="col subheadercol">
+            <h2>Created By Pete Fittante</h2>
+            <p>Not at all copyrighted</p>
+        </div>
+    </div>
+    </div> <!--container end div-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("jumbomain");
+            x.getElementsByTagName("h1")[0].style.fontSize = "50px";
+            x.getElementsByTagName("p")[0].style.fontSize = "50px";
+            x.getElementsByTagName("h1")[0].style.color = "red";
+            x.getElementsByTagName("p")[0].style.color = "red";
+        };
+    </script>
+</body>
+</html>
